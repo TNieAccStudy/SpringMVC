@@ -15,15 +15,15 @@ import org.springframework.web.bind.annotation.GetMapping;
  * @author admin
  */
 @Controller
-public class MyController {
+public class AppController {
     
     @Autowired
     private CategoryService cateService;
     
-    @GetMapping
-    public String getIndex(Model model) {
+    @GetMapping("/")
+    public String home(Model model) {
         model.addAttribute("msg", "testconnection-1");
-        model.addAttribute("cates", cateService.getCates());
-        return "index";
+//        model.addAttribute("cates", cateService.getCates());
+        return "base";
     }
 }

@@ -51,7 +51,7 @@ public class Comment implements Serializable {
     private Date createdDate;
     @JoinColumn(name = "product_id", referencedColumnName = "id")
     @ManyToOne(optional = false)
-    private Product productId;
+    private Product product;
     @JoinColumn(name = "user_id", referencedColumnName = "id")
     @ManyToOne(optional = false)
     private User user;
@@ -93,11 +93,11 @@ public class Comment implements Serializable {
     }
 
     public Product getProductId() {
-        return productId;
+        return product;
     }
 
     public void setProductId(Product productId) {
-        this.productId = productId;
+        this.product = productId;
     }
 
     public User getUserId() {

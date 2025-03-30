@@ -12,12 +12,14 @@ import org.hibernate.Session;
 import org.hibernate.query.Query;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.orm.hibernate5.LocalSessionFactoryBean;
+import org.springframework.transaction.annotation.Transactional;
 
 /**
  *
  * @author admin
  */
 @Repository
+@Transactional
 public class CategoryRepositoryImpl implements CategoryRepository{
     
     @Autowired

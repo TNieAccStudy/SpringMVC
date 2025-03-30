@@ -17,6 +17,7 @@ import org.thymeleaf.templateresolver.ClassLoaderTemplateResolver;
  */
 @Configuration
 public class ThymeleafConfigs {
+    
 
     @Bean
     public ClassLoaderTemplateResolver templateResolver() {

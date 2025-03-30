@@ -16,21 +16,20 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
  * @author admin
  */
 @Configuration
-@EnableTransactionManagement
 @EnableWebMvc
+@EnableTransactionManagement
 @ComponentScan(
-    basePackages = {
-        "com.tnieyu.controllers",
-        "com.tnieyu.repositories",
-        "com.tnieyu.services"
-    }
+        basePackages = {
+            "com.tnieyu.repositories",
+            "com.tnieyu.services",
+            "com.tnieyu.controllers"
+        }
 )
-public class WebAppContextConfigs implements WebMvcConfigurer{
+public class WebAppContextConfigs implements WebMvcConfigurer {
 
     @Override
     public void configureDefaultServletHandling(DefaultServletHandlerConfigurer configurer) {
         configurer.enable();
     }
-    
-    
+
 }

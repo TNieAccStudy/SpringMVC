@@ -89,9 +89,9 @@ public class User implements Serializable {
     @Column(name = "avatar")
     private String avatar;
     @OneToMany(mappedBy = "user")
-    private Collection<SaleOrder> saleOrders;
+    private Collection<SaleOrder> saleOrderCollection;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "user")
-    private Collection<Comment> comments;
+    private Collection<Comment> commentCollection;
 
     public User() {
     }
@@ -192,19 +192,19 @@ public class User implements Serializable {
     }
 
     public Collection<SaleOrder> getSaleOrderCollection() {
-        return saleOrders;
+        return saleOrderCollection;
     }
 
     public void setSaleOrderCollection(Collection<SaleOrder> saleOrderCollection) {
-        this.saleOrders = saleOrderCollection;
+        this.saleOrderCollection = saleOrderCollection;
     }
 
     public Collection<Comment> getCommentCollection() {
-        return comments;
+        return commentCollection;
     }
 
     public void setCommentCollection(Collection<Comment> commentCollection) {
-        this.comments = commentCollection;
+        this.commentCollection = commentCollection;
     }
 
     @Override
